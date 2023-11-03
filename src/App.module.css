@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  padding: 40px;
+}
+
+img {
+  height: 40px;
+  width: 40px;
+}
+
+.title {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.ul{
+  list-style-type: none;
+}
+
+

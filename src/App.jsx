@@ -1,34 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import martinIcon from '/martinIcon.svg'
+import style from './App.module.css'
+import { NavLink, Route, Routes } from 'react-router-dom'
+
+import Home from './components/Home'
+import SearchBar from './components/SearchCity'
+import Cities from './components/Cities'
+import City from './components/City'
+import CityDetails from './components/CityDetails'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <header className={style.header}> 
+        <div className={style.title}>
+          <h1>Wheather App with Vite </h1>      
+          <img src={martinIcon} alt="Logo" />
+        </div> 
+        <nav>
+        <ul className={style.ul}>
+          <li><NavLink to='/'>Home</NavLink></li>
+          <li><NavLink to='/search-city'>Search City</NavLink></li>
+          <li><NavLink to='/cities'>Cities</NavLink></li>  
+                  
+        </ul>
+        </nav>      
+      </header>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/search-city' element={< SearchBar />} />
+        <Route path='/cities' element={<Cities />} />
+        <Route path='/cities/:city' element={<City/>} >
+          <Route path='details' element={<CityDetails/>} />
+        </Route>
+      
+      </Routes>     
+    </div>
+    
   )
 }
 
