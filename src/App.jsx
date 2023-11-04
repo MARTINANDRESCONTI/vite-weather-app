@@ -11,31 +11,39 @@ import CityDetails from './components/CityDetails'
 function App() {
   
   return (
-    <div>
+    <div >      
       <header className={style.header}> 
         <div className={style.title}>
           <h1>Wheather App with Vite </h1>      
-          <img src={martinIcon} alt="Logo" />
+          <img className={style.logo} src={martinIcon} alt="Logo" />
         </div> 
         <nav>
-        <ul className={style.ul}>
-          <li><NavLink to='/'>Home</NavLink></li>
-          <li><NavLink to='/search-city'>Search City</NavLink></li>
-          <li><NavLink to='/cities'>Cities</NavLink></li>  
+        <div className={style.options}>
+          <NavLink to='/'><button className={style.option}>Home</button></NavLink>
+          <NavLink to='/search-city'><button className={style.option}>Search-city</button></NavLink>  
+          <NavLink to='/cities'><button className={style.option}>Cities</button> </NavLink> 
+        </div>
+        
                   
-        </ul>
+        
         </nav>      
       </header>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/search-city' element={< SearchBar />} />
-        <Route path='/cities' element={<Cities />} />
-        <Route path='/cities/:city' element={<City/>} >
-          <Route path='details' element={<CityDetails/>} />
-        </Route>
-      
-      </Routes>     
-    </div>
+      <body className={style.body}>
+        <div className={style.bkg}/>
+        <div className={style.pagecontainer}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/search-city' element={< SearchBar />} />
+            <Route path='/cities' element={<Cities />} />
+            <Route path='/cities/:city' element={<City/>} >
+              <Route path='details' element={<CityDetails/>} />
+            </Route>        
+          </Routes>
+        </div>
+        
+      </body>
+      </div>    
+   
     
   )
 }
