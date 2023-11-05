@@ -11,46 +11,17 @@ export default function Cities() {
         <li key={e.id}>
           <Link to={`/cities/${e.name}`}>
             {e.name}
-          </Link> 
-          {/* <City 
-          name = {e.name}
-          max = {e.temp_max} 
-          min = {e.temp_min}  
-          /> */}
+          </Link>           
         </li>
-      </ul>
-      // <div style={{display : 'flex'} }>
-      //   <Link to={`/cities/${e.name}`}>
-      //     {e.name}
-      //   </Link> 
-      //   <City 
-      //     // name = {e.name}
-      //     max = {e.main.temp_max} 
-      //     min = {e.main.temp_min}  
-      //   />
-
-      // </div>
+      </ul>      
     )
-  }
-
-  )
+  })
   return (
     <div>  
       <div>
         {citiesCard}
       </div>
-      {/* <div>
-        <ul>
-          {cities.map(city => (
-            <li key={city.id}>
-             
-              <Link to={`/cities/${city.name}`}>
-                {city.name}{city.id}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div> */}
+  
     </div>
   )
 }

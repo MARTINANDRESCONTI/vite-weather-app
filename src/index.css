@@ -18,4 +18,7 @@
 
 .active{
   color: var(--appRed);
+  text-decoration: none;
+  border: solid 2px var(--appRed);
+  border-radius: 50px;
 }

@@ -11,10 +11,10 @@ import CityDetails from './components/CityDetails'
 function App() {
   
   return (
-    <div >      
+    <div className={style.main}>      
       <header className={style.header}> 
         <div className={style.title}>
-          <h1>Wheather App with Vite </h1>      
+          <h1>Weather App with Vite </h1>      
           <img className={style.logo} src={martinIcon} alt="Logo" />
         </div> 
         <nav>
@@ -28,7 +28,7 @@ function App() {
         
         </nav>      
       </header>
-      <body className={style.body}>
+      <section className={style.body}>
         <div className={style.bkg}/>
         <div className={style.pagecontainer}>
           <Routes>
@@ -41,8 +41,8 @@ function App() {
           </Routes>
         </div>
         
-      </body>
-      </div>    
+      </section>
+    </div>    
    
     
   )

@@ -1,0 +1,66 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--appVeige);
+  border-radius: 15px;
+  align-items: center;
+
+}
+
+.containerheader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.title {
+  font-size: 70px;
+}
+
+.labinputcontainer {
+  display: flex;
+  height: 40px;
+}
+
+.input {
+  border-right: 0px;
+  border-left: 0px;
+  padding: 5px 10px;
+}
+
+.iconsearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid black 2px ;
+  padding: 5px 10px;
+  border-radius: 50px 0px 0px 50px;
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+}
+
+.icondelete {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid black 2px ;
+  padding: 5px 10px;
+  border-radius: 0px 50px 50px 0px;
+  cursor: pointer;
+  background-color: var(--appRed);
+  color: white;
+}
+
+.citysearched {
+  margin-top: 20px;
+  height: 60%;
+  width: 60%;
+  background-color: white;
+  border-radius: 15px;
+}
