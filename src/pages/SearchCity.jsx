@@ -2,7 +2,7 @@ import React from 'react'
 import { FaSearch, FaTimes } from "react-icons/fa";
 
 import style from './SearchCity.module.css'
-import CitySearched from './CitySearched'
+import CitySearched from '../components/CitySearched'
 
 import cities from '../data';
 
@@ -11,7 +11,7 @@ export default function SearchCity() {
   return (
     <div className={style.container}>
       <div className={style.containerheader}>
-        <h3 className={style.title}>Search City</h3>
+        <h3 className={style.title}>Weather</h3>
         <form className={style.labinputcontainer}>
           <div className={style.iconsearch}><FaSearch /></div>
           <input className={style.input} type='text' name='City' placeholder='introduce your city' required />

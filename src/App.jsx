@@ -2,9 +2,9 @@ import martinIcon from '/martinIcon.svg'
 import style from './App.module.css'
 import { NavLink, Route, Routes } from 'react-router-dom'
 
-import Home from './components/Home'
-import SearchBar from './components/SearchCity'
-import Cities from './components/Cities'
+import Home from './pages/Home'
+import SearchBar from './pages/SearchCity'
+import Cities from './pages/Cities'
 import City from './components/City'
 import CityDetails from './components/CityDetails'
 
@@ -20,8 +20,8 @@ function App() {
         <nav>
         <div className={style.options}>
           <NavLink to='/'><button className={style.option}>Home</button></NavLink>
-          <NavLink to='/search-city'><button className={style.option}>Search-city</button></NavLink>  
-          <NavLink to='/cities'><button className={style.option}>Cities</button> </NavLink> 
+          <NavLink to='/search-city'><button className={style.option}>Weather</button></NavLink>  
+          <NavLink to='/cities'><button className={style.option}>Cities Searched</button> </NavLink> 
         </div>
         
                   

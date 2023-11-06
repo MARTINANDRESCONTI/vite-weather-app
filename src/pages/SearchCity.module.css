@@ -27,8 +27,7 @@
 }
 
 .input {
-  border-right: 0px;
-  border-left: 0px;
+  border: none;
   padding: 5px 10px;
 }
 
@@ -36,12 +35,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid black 2px ;
+  border: 2px 0px 2px 2px solid black;
   padding: 5px 10px;
   border-radius: 50px 0px 0px 50px;
   cursor: pointer;
-  background-color: gray;
-  color: white;
+  background-color: white;
+  color: gray;
 }
 
 .icondelete {
@@ -49,12 +48,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid black 2px ;
   padding: 5px 10px;
   border-radius: 0px 50px 50px 0px;
   cursor: pointer;
-  background-color: var(--appRed);
-  color: white;
+  background-color:white;
+  color: var(--appRed);
 }
 
 .citysearched {
