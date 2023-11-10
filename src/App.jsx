@@ -34,10 +34,10 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/search-city' element={< SearchBar />} />
-            <Route path='/cities' element={<Cities />} />
-            <Route path='/cities/:city' element={<City/>} >
+            <Route path='/search-city/:city' element={<City/>} > 
               <Route path='details' element={<CityDetails/>} />
-            </Route>        
+            </Route> 
+            <Route path='/cities' element={<Cities />} />           
           </Routes>
         </div>
         

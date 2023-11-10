@@ -1,14 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 
 import style from './CityListed.module.css'
 
 export default function CityListed(props) {
   return (    
     <li className ={style.li} key={props.id}>
-      <Link className={style.city} to={`/cities/${props.name}`}>
+      <h2 className={style.city} >
         {props.name}
-      </Link>
+      </h2>
       <div>
         <h3>Min :</h3>   
         <p>{props.min}</p>

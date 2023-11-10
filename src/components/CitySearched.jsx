@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import style from './CitySearched.module.css'
 
@@ -7,6 +8,9 @@ export default function CitySearched(props) {
     <div className={style.container}>
       <div className={style.titleandcountry}>
         <h2 className={style.title}>{props.name}</h2>
+        <Link className={style.button} to={`/search-city/${props.name}`}>
+          <button className={style.button}>See details</button>
+        </Link>        
         <h3 className={style.country}>{props.country}</h3>
       </div>
       <div className={style.tempicon}>

@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
 
 import cities from '../data'
 import CityListed from './CityListed'
