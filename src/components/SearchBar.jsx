@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaSearch, FaTimes } from "react-icons/fa";
 
-// import fetchApi from '../services/GlobalApi';
 import { useState } from "react";
 import style from './SearchBar.module.css'
 
@@ -10,21 +9,22 @@ export default function SearchBar({fetchCity}) {
   const [inputCity, setInputCity] = useState('')
 
     function handleChange (event) {
-    return setInputCity(event.target.value)
+      return setInputCity(event.target.value)
   } 
   
     function clearInput () {
-    setInputCity('')
+      setInputCity('')
   }
+
+    function handleFetch (e) {
+      e.preventDefault();
+      fetchCity(inputCity)
+      setInputCity('')
+    }
 
   return (
     <div>
-      <form className={style.labinputcontainer} onSubmit={(e)=>{
-        e.preventDefault();
-        fetchCity(inputCity)
-        setInputCity('')
-      }
-      }>
+      <form className={style.labinputcontainer} onSubmit={handleFetch}>
           <button className={style.iconsearch} >
             <FaSearch />
           </button>
