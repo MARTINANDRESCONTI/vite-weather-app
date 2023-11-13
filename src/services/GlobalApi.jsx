@@ -4,7 +4,7 @@ export default function fetchApi (inputCity, setCitiesArray){
   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`)
       .then(response => response.json())
       .then((res) => {        
-        if(res){
+        if(res.main !== undefined){
           const elem = {
             name: res.name,
             min: Math.round(res.main.temp_min),
@@ -19,10 +19,8 @@ export default function fetchApi (inputCity, setCitiesArray){
             latitud: res.coord.lat,
             longitud: res.coord.lon          
           }
-          console.log(elem)
-          setCitiesArray(oldCities => [elem, ...oldCities]);
-          
-          
+          console.log(res)
+          setCitiesArray(oldCities => [elem, ...oldCities]);         
         } else {
           alert("Ciudad no encontrada");
         }

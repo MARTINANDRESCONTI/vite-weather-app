@@ -1,44 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import style from './SearchCity.module.css'
 import CitySearched from '../components/CitySearched'
 import SearchBar from '../components/SearchBar'
-import fetchApi from '../services/GlobalApi';
 
-export default function SearchCity() {  
-
-  const [citiesArray, setCitiesArray] = useState([])
-
-  function fetchCity (inputCity) {
-    fetchApi(inputCity,setCitiesArray)
-    // fetch(`http://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`)
-    //   .then(response => response.json())
-    //   .then((res) => {        
-    //     if(res){
-    //       const elem = {
-    //         name: res.name,
-    //         min: Math.round(res.main.temp_min),
-    //         max: Math.round(res.main.temp_max),
-    //         img: res.weather[0].icon,
-    //         id: res.id,
-    //         wind: res.wind.speed,
-    //         temp: res.main.temp,
-    //         weather: res.weather[0].icon,
-    //         description: res.weather[0].description,
-    //         clouds: res.clouds.all,
-    //         latitud: res.coord.lat,
-    //         longitud: res.coord.lon          
-    //       }
-    //       console.log(elem)
-    //       setCitiesArray(oldCities => [elem, ...oldCities]);
-                  
-    //     } else {
-    //       alert("Ciudad no encontrada");
-    //     }
-    //   }
-    // )
-  } 
-
+export default function SearchCity({ fetchCity, citiesArray, setCitiesArray }) {  
   return (
     <div className={style.container}>
       <div className={style.containerheader}>
@@ -46,7 +12,7 @@ export default function SearchCity() {
         <SearchBar fetchCity={fetchCity}/>
       </div>
       <div className={style.citysearched}>
-        {citiesArray.length !== 0 ? <CitySearched
+        {citiesArray.length > 0 ? <CitySearched
           name = {citiesArray[0].name}
           max = {citiesArray[0].max} 
           min = {citiesArray[0].min}  

@@ -9,14 +9,14 @@ export default function CityListed(props) {
       <h2 className={style.city} >
         {props.name}
       </h2>
-      <div>
+      {/* <div>
         <h3>Min :</h3>   
         <p>{props.min}</p>
       </div>
       <div>
         <h3>Max :</h3>
         <p>{props.max}</p>
-      </div>
+      </div> */}
       <button className={style.button}>X</button>                 
     </li>
 

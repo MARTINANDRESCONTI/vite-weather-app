@@ -1,14 +1,20 @@
 import martinIcon from '/martinIcon.svg'
 import style from './App.module.css'
 import { NavLink, Route, Routes } from 'react-router-dom'
+import { useState } from 'react'
 
 import Home from './pages/Home'
-import SearchBar from './pages/SearchCity'
 import Cities from './pages/Cities'
 import City from './components/City'
-import CityDetails from './components/CityDetails'
+import fetchApi from './services/GlobalApi';
+import SearchCity from './pages/SearchCity'
 
 function App() {
+
+  const [citiesArray, setCitiesArray] = useState([])
+
+  function fetchCity (inputCity) {
+    fetchApi(inputCity,setCitiesArray)  } 
   
   return (
     <div className={style.main}>      
@@ -22,10 +28,8 @@ function App() {
           <NavLink to='/'><button className={style.option}>Home</button></NavLink>
           <NavLink to='/search-city'><button className={style.option}>Weather</button></NavLink>  
           <NavLink to='/cities'><button className={style.option}>Cities Searched</button> </NavLink> 
-        </div>
-        
-                  
-        
+        </div>    
+
         </nav>      
       </header>
       <section className={style.body}>
@@ -33,11 +37,22 @@ function App() {
         <div className={style.pagecontainer}>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/search-city' element={< SearchBar />} />
-            <Route path='/search-city/:city' element={<City/>} > 
-              <Route path='details' element={<CityDetails/>} />
+            <Route path='/search-city' 
+              element={< SearchCity 
+              setCitiesArray={setCitiesArray}
+              fetchCity={fetchCity}
+              citiesArray={citiesArray}
+              />}
+            />
+            <Route path='/search-city/:city' 
+              element={<City 
+                citiesArray={citiesArray}            
+              />} >               
             </Route> 
-            <Route path='/cities' element={<Cities />} />           
+            <Route path='/cities' 
+              element={<Cities 
+                citiesArray={citiesArray}     
+              />} />           
           </Routes>
         </div>
         
