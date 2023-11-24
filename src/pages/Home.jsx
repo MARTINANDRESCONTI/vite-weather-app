@@ -1,17 +1,26 @@
 import React from 'react'
+import { TbBrandVite } from "react-icons/tb";
+import { FaReact } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+
 
 import style from './Home.module.css'
 
 export default function Home() {
   return (
     <div className={style.container}>
-      <h3 className={style.title}>Welcome</h3>
-      <br></br>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia necessitatibus excepturi impedit cum. Eius saepe, aliquam deleniti et, repellendus nihil exercitationem debitis sed molestiae quidem quis, ipsam cumque velit laborum?</p>
-      <br></br>
-      <h2>
-        Select the option "Search-city" to look for the wheather in the city of your choise.      
-      </h2>
+      <div>
+        <h3 className={style.title}>Welcome</h3>
+      </div>
+      <div className={style.body}>
+        <p className={style.p}>
+          Hi! This is a weather app with <TbBrandVite /> <FaReact />  <IoLogoJavascript />.
+        </p>
+        <br></br>
+        <h3>
+          Search the city's weather of your choise.      
+        </h3>
+      </div>      
     </div>
   )
 }

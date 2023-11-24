@@ -14,7 +14,11 @@ function App() {
   const [citiesArray, setCitiesArray] = useState([])
 
   function fetchCity (inputCity) {
-    fetchApi(inputCity,setCitiesArray)  } 
+    fetchApi(inputCity,setCitiesArray)} 
+
+  function deleteCity (id) {
+    setCitiesArray(old => old.filter(c=> c.id !== id))
+  } 
   
   return (
     <div className={style.main}>      
@@ -51,7 +55,8 @@ function App() {
             </Route> 
             <Route path='/cities' 
               element={<Cities 
-                citiesArray={citiesArray}     
+                citiesArray={citiesArray} 
+                deleteCity={deleteCity}    
               />} />           
           </Routes>
         </div>

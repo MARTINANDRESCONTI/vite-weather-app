@@ -4,7 +4,7 @@ import { FaSearch, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import style from './SearchBar.module.css'
 
-export default function SearchBar({fetchCity}) {
+export default function SearchBar({fetchCity, citiesArray}) {
 
   const [inputCity, setInputCity] = useState('')
 
@@ -15,11 +15,11 @@ export default function SearchBar({fetchCity}) {
     function clearInput () {
       setInputCity('')
   }
-
+  
     function handleFetch (e) {
       e.preventDefault();
       fetchCity(inputCity)
-      setInputCity('')
+      setInputCity('') 
     }
 
   return (

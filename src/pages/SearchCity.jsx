@@ -4,7 +4,7 @@ import style from './SearchCity.module.css'
 import CitySearched from '../components/CitySearched'
 import SearchBar from '../components/SearchBar'
 
-export default function SearchCity({ fetchCity, citiesArray, setCitiesArray }) {  
+export default function SearchCity({ fetchCity, citiesArray }) {  
   return (
     <div className={style.container}>
       <div className={style.containerheader}>

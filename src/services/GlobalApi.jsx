@@ -13,11 +13,13 @@ export default function fetchApi (inputCity, setCitiesArray){
             id: res.id,
             wind: res.wind.speed,
             temp: res.main.temp,
+            humidity: res.main.humidity,
             weather: res.weather[0].icon,
             description: res.weather[0].description,
             clouds: res.clouds.all,
             latitud: res.coord.lat,
-            longitud: res.coord.lon          
+            longitud: res.coord.lon,  
+            country: res.sys.country        
           }
           console.log(res)
           setCitiesArray(oldCities => [elem, ...oldCities]);         
