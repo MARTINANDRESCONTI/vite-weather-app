@@ -1,7 +1,7 @@
 const apiKey = import.meta.env.VITE_API_KEY
 
 export default function fetchApi (inputCity, setCitiesArray){
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`)
       .then(response => response.json())
       .then((res) => {        
         if(res.main !== undefined){
