@@ -4,7 +4,7 @@ export default function fetchApi (inputCity, setCitiesArray){
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`)
       .then(response => response.json())
       .then((res) => {        
-        if(res.main !== undefined){
+        if(res.main !== undefined){ 
           const elem = {
             name: res.name,
             min: Math.round(res.main.temp_min),
