@@ -10,8 +10,7 @@ export default function Cities( { citiesArray, deleteCity } ) {
       <h2 className={style.title}>Lates cities searched</h2> 
       <div className={style.list}>
         <CityList citiesArray={citiesArray} deleteCity={deleteCity}/>             
-      </div>
-  
+      </div>  
     </div>
   )
 }

@@ -22,9 +22,6 @@ export default function CityListed(props) {
         </div>
         <button className={style.button} onClick={props.deleteCity}><FaTrashAlt /></button>
       </div>
-    </li>
-
-    
-    
+    </li>    
   )
 }

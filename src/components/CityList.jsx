@@ -1,6 +1,6 @@
 import React from 'react'
 
-// import cities from '../data'
+
 import CityListed from './CityListed'
 
 export default function CityList( { citiesArray, deleteCity }) {

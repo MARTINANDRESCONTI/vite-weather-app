@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <div className={style.body}>
         <p className={style.p}>
-          Hi! This is a weather app with <TbBrandVite /> <FaReact />  <IoLogoJavascript />.
+          Hi! This is a weather app using <TbBrandVite /> <FaReact />  <IoLogoJavascript />.
         </p>
         <br></br>
         <h3>
