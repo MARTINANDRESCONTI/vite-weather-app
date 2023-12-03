@@ -92,7 +92,7 @@
   right: 80px;
   height: 75vh;
   width: 86vw;
-  background-color: white;
+  background-color: var(--appVeige);
   border-radius: 15px;
 }
 
