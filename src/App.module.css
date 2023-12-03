@@ -60,6 +60,13 @@
   background-color: var(--appVeige);
 }
 
+.git {
+  height: 30px;
+  width: 30px; 
+  color: var(--appRed); 
+  margin-left: 25px;   
+}
+
 .body {
   height: 100vh;
   width: 100vw;

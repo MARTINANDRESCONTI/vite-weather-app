@@ -8,6 +8,7 @@ import Cities from './pages/Cities'
 import City from './components/City'
 import fetchApi from './services/GlobalApi';
 import SearchCity from './pages/SearchCity'
+import { FaGithubSquare } from "react-icons/fa";
 
 function App() {
 
@@ -28,39 +29,38 @@ function App() {
           <img className={style.logo} src={martinIcon} alt="Logo" />
         </div> 
         <nav>
-        <div className={style.options}>
-          <NavLink to='/'><button className={style.option}>Home</button></NavLink>
-          <NavLink to='/search-city'><button className={style.option}>Weather</button></NavLink>  
-          <NavLink to='/cities'><button className={style.option}>Cities Searched</button> </NavLink> 
-        </div>    
-
+          <div className={style.options}>
+            <NavLink to='/'><button className={style.option}>Home</button></NavLink>
+            <NavLink to='/search-city'><button className={style.option}>Weather</button></NavLink>  
+            <NavLink to='/cities'><button className={style.option}>Cities Searched</button> </NavLink>
+            <a href='https://github.com/MARTINANDRESCONTI/vite-weather-app'><FaGithubSquare className={style.git}/></a> 
+          </div>   
         </nav>      
       </header>
       <section className={style.body}>
         <div className={style.bkg}/>
-        <div className={style.pagecontainer}>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/search-city' 
-              element={< SearchCity 
-              setCitiesArray={setCitiesArray}
-              fetchCity={fetchCity}
-              citiesArray={citiesArray}
-              />}
-            />
-            <Route path='/search-city/:city' 
-              element={<City 
-                citiesArray={citiesArray}            
-              />} >               
-            </Route> 
-            <Route path='/cities' 
-              element={<Cities 
-                citiesArray={citiesArray} 
-                deleteCity={deleteCity}    
-              />} />           
-          </Routes>
-        </div>
-        
+          <div className={style.pagecontainer}>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/search-city' 
+                element={< SearchCity 
+                setCitiesArray={setCitiesArray}
+                fetchCity={fetchCity}
+                citiesArray={citiesArray}
+                />}
+              />
+              <Route path='/search-city/:city' 
+                element={<City 
+                  citiesArray={citiesArray}            
+                />} >               
+              </Route> 
+              <Route path='/cities' 
+                element={<Cities 
+                  citiesArray={citiesArray} 
+                  deleteCity={deleteCity}    
+                />} />           
+            </Routes>
+          </div>        
       </section>
     </div>    
    
