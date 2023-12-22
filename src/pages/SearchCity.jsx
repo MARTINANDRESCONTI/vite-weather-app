@@ -9,7 +9,9 @@ export default function SearchCity({ fetchCity, citiesArray }) {
     <div className={style.container}>
       <div className={style.containerheader}>
         <h3 className={style.title}>Weather</h3>
-        <SearchBar fetchCity={fetchCity}/>
+        <div className={style.seachBar}>
+          <SearchBar fetchCity={fetchCity}/>
+        </div>
       </div>
       <div className={style.citysearched}>
         {citiesArray.length > 0 ? <CitySearched

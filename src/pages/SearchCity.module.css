@@ -2,23 +2,27 @@
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background-color: var(--appVeige);
-  border-radius: 15px;
+  flex-direction: column;  
+  background-color: transparent;
   align-items: center;
-
 }
 
 .containerheader {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
 }
 
 .title {
-  font-size: 70px;
+  height: max-content;
+  width: max-content;
+  font-size: 50px;
+  margin-right: 15px;
+}
+
+.searchBar {
+  height: max-content;
+  width: max-content;
 }
 
 .citysearched {
@@ -37,4 +41,13 @@
   background-repeat: none;
   background-size: cover;
   opacity: 0.8;
+}
+
+@media screen and (max-width: 600px) {
+  .containerheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }  
 }

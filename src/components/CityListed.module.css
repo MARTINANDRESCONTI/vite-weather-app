@@ -2,21 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 600px;
+  width: 550px;
   height: 100px;
   background-color: var(--appVeige);
-  margin: 7px;
-  padding: 20px;
+  margin-bottom: 4px;
+  padding: 20px 10px; 
 }
 
 .city {
-  font-size: 25px;
+  font-size: 22px;
   text-decoration: none;
   font-weight: 900;
   color: var(--appRed);
 }
-
-
 
 .temp, .data {
   display: flex;
@@ -39,4 +37,33 @@
 .button:hover {
   background-color: white;
   color: var(--appRed);
+}
+
+@media screen and (max-width: 600px) {
+  .li {  
+    width: 450px; 
+    padding: 20px 10px; 
+  }
+
+  .city {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .temp, .data {
+    font-size: 15px;
+    gap: 5px;
+  }
+
+  .button {
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+  }
+
+  .data p {
+    font-size: 14px;
+  }
 }

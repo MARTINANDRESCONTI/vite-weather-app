@@ -8,7 +8,7 @@ import Cities from './pages/Cities'
 import City from './components/City'
 import fetchApi from './services/GlobalApi';
 import SearchCity from './pages/SearchCity'
-import { FaGithubSquare } from "react-icons/fa";
+import Footer from './components/Footer'
 
 function App() {
 
@@ -25,15 +25,17 @@ function App() {
     <div className={style.main}>      
       <header className={style.header}> 
         <div className={style.title}>
-          <h1>Weather App with Vite </h1>      
-          <img className={style.logo} src={martinIcon} alt="Logo" />
+          <a className={style.icon} href='https://martin-conti-portfolio.vercel.app/' target='_blank'>
+            <img className={style.logo} src={martinIcon} alt="Logo" />                          
+          </a>
+          <h1>Weather App</h1>      
         </div> 
         <nav>
           <div className={style.options}>
-            <NavLink to='/'><button className={style.option}>Home</button></NavLink>
-            <NavLink to='/search-city'><button className={style.option}>Weather</button></NavLink>  
-            <NavLink to='/cities'><button className={style.option}>Cities Searched</button> </NavLink>
-            <a href='https://github.com/MARTINANDRESCONTI/vite-weather-app'><FaGithubSquare className={style.git}/></a> 
+            <NavLink className={style.option} to='/'><div>Home</div></NavLink>
+            <NavLink  className={style.option} to='/search-city'><div>Weather</div></NavLink>  
+            <NavLink className={style.option} to='/cities'><div >Searched</div> </NavLink>
+             
           </div>   
         </nav>      
       </header>
@@ -62,6 +64,7 @@ function App() {
             </Routes>
           </div>        
       </section>
+      <Footer />
     </div>    
    
     

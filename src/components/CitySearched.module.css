@@ -23,14 +23,15 @@
 }
 
 .title {
-  font-size: 50px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 250px;
+  width: 170px;
   height: 30px;
   cursor: pointer;
   font-size: larger;
@@ -40,7 +41,6 @@
   background-color: var(--appRed);
   color: white;
   text-decoration: none;
-
 }
 
 .button:hover {
@@ -58,8 +58,7 @@
   flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
-  flex: 1;
-  
+  flex: 1;  
 }
 
 .temp {
@@ -71,4 +70,21 @@
   height: 150px;
   width: 150px;
   background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .button {
+      width: 130px;
+      font-size: 16px;
+  }
+
+  .icon {
+    height: 100px;
+    width: 100px;
+  }
 }

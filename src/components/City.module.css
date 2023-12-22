@@ -19,7 +19,8 @@
 }
 
 .title {
-  font-size: 60px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .bodycontainer {
@@ -36,7 +37,7 @@
 .body {
   width: inherit;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .link {
