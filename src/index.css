@@ -17,5 +17,5 @@
 }
 
 .active{  
-  background-color: var(--appVeige);
+  border: solid 3.5px white;
 }

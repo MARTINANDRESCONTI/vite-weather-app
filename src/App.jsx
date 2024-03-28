@@ -15,7 +15,7 @@ function App() {
   const [citiesArray, setCitiesArray] = useState([])
 
   function fetchCity (inputCity) {
-    fetchApi(inputCity,setCitiesArray)} 
+    fetchApi(inputCity,citiesArray, setCitiesArray)} 
 
   function deleteCity (id) {
     setCitiesArray(old => old.filter(c=> c.id !== id))
@@ -34,7 +34,7 @@ function App() {
           <div className={style.options}>
             <NavLink className={style.option} to='/'><div>Home</div></NavLink>
             <NavLink  className={style.option} to='/search-city'><div>Weather</div></NavLink>  
-            <NavLink className={style.option} to='/cities'><div >Searched</div> </NavLink>
+            <NavLink className={style.option} to='/cities'><div >Listed</div> </NavLink>
              
           </div>   
         </nav>      

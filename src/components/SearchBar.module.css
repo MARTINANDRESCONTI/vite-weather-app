@@ -1,6 +1,7 @@
 .labinputcontainer {
   display: flex;
   height: 40px;
+  width: 100%;
 }
 
 .iconsearch {
@@ -21,6 +22,7 @@
 }
 
 .input {
+  width: 100%;
   border: none;
   padding: 5px 10px;  
 }
@@ -39,4 +41,10 @@
   cursor: pointer;
   background-color:white;
   color: var(--appRed);
+}
+
+@media screen and (max-width: 700px) {
+  .labinputcontainer {
+    padding: 0px 10px;
+  }
 }

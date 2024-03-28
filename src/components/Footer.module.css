@@ -1,16 +1,18 @@
 .container {
-  height: 3rem;
+  height: 45px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 5px;
   background-color: var(--appRed);
-  color: var(--appWhite);   
-  z-index: 3;
+  color: var(--appWhite);  
+  z-index: 3; 
 }
 
 .contact {
+  height: 100%;
+  width: fit-content;
   display: flex;
   justify-content: space-between;
 }
@@ -30,7 +32,7 @@
 .social a:visited { text-decoration: none; color:white; }
 .social a:hover { text-decoration: none; color:white; }
 .social a:focus { text-decoration: none; color:white; }
-.social a:hover, a:active { text-decoration: none; color:white }
+.social a:active { text-decoration: none; color:white }
 
 .icon {
   height: 1.5rem;
@@ -38,26 +40,94 @@
   margin: 5px;
 }
 
-@media screen and (max-width: 600px) {
-  .container {
-    height: 5rem; 
-    width: 100%;
+@media screen and (max-width: 700px) {
+    .container {
+    height: fit-content; 
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-around;    
     padding: 0px;    
-  }
-
-  .icon {
-    height: 1.5rem; 
   }
 
   .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: fit-content;
+    margin: 0;
+  }
+
+    .icon {
+    height: 18px; 
+  }
+
+  .social{
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social > a {
+    height: 20px;
+    width: fit-content;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .contact h3 {
-    font-size: 1rem;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    height: fit-content; 
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;    
+    padding: 0px;    
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    margin: 0;
+  }
+
+    .icon {
+    height: 18px; 
+  }
+
+  .social{
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social > a {
+    height: 20px;
+    width: fit-content;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
   }
 }

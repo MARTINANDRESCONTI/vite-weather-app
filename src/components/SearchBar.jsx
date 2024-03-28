@@ -4,7 +4,7 @@ import { FaSearch, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import style from './SearchBar.module.css'
 
-export default function SearchBar({fetchCity, citiesArray}) {
+export default function SearchBar({fetchCity}) {
 
   const [inputCity, setInputCity] = useState('')
 
@@ -23,7 +23,7 @@ export default function SearchBar({fetchCity, citiesArray}) {
     }
 
   return (
-    <div>
+    <>
       <form className={style.labinputcontainer} onSubmit={handleFetch}>
           <button className={style.iconsearch} >
             <FaSearch />
@@ -39,6 +39,6 @@ export default function SearchBar({fetchCity, citiesArray}) {
           />
           <div className={style.icondelete} onClick={clearInput}><FaTimes /></div>
         </form>
-    </div>
+    </>
   )
 }

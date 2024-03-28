@@ -16,7 +16,7 @@ export default function City( { citiesArray } ) {
       <div className={style.bodycontainer}>
         <div className={style.body}>
           <div>
-            <img src={`http://openweathermap.org/img/wn/${ct.img}@2x.png`} alt='icon'/>
+            <img className={style.icon} src={`http://openweathermap.org/img/wn/${ct.img}@2x.png`} alt='icon'/>
           </div>
           <div>
             <p>Temperture: {ct.temp}°</p>

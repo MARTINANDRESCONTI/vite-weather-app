@@ -1,7 +1,7 @@
 import React from 'react'
 
 import style from './Footer.module.css'
-import { HiMail } from "react-icons/hi";
+import { RiMailSendFill } from "react-icons/ri";
 import { PiWhatsappLogoDuotone } from "react-icons/pi";
 import { IoLogoGithub } from "react-icons/io";
 import { IoLogoLinkedin } from "react-icons/io5";
@@ -10,9 +10,8 @@ export default function Footer() {
   return (
     <div className={style.container}>
       <div className={style.contact}>
-        <h3>  
-          <HiMail className={style.icon}/>
-          martin.a.conti2014@gmail.com
+        <h3>   
+          <RiMailSendFill className={style.icon} /> martin.a.conti2014@gmail.com
         </h3>
         <h3>
           <PiWhatsappLogoDuotone className={style.icon}/> +54 9 261 611-7708
