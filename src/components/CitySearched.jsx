@@ -10,8 +10,7 @@ export default function CitySearched(props) {
         <h2 className={style.title}>{props.name}</h2>
         <Link className={style.button} to={`/search-city/${props.name}`}>
           <button className={style.button}>See details</button>
-        </Link>        
-        <h3 className={style.country}>{props.country}</h3>
+        </Link> 
       </div>
       <div className={style.tempicon}>
         <div className={style.temp}>

@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: center;
   flex: 1;  
-  gap: 10px;
+  gap: 30px;
 }
 
 .title {
@@ -44,14 +44,11 @@
   background-color: var(--appRed);
   color: white;
   text-decoration: none;
+  box-shadow: 5px 3px 7px white;
 }
 
 .button:hover {
-  opacity: 0.8;
-}
-
-.country {
-  font-size: 30px;
+  box-shadow: none;
 }
 
 .tempicon {
@@ -65,15 +62,21 @@
 }
 
 .temp {
+  height: fit-content;
+  width: fit-content;
   display: flex;
   gap: 15px;
+  background-color: rgba(135, 206, 250, 0.761);
+  padding: 15px 20px;
+  margin: 5px;
+  border-radius: 15px;
 }
 
 .icon {
   height: 150px;
   width: 150px;
   border-radius: 100px;
-  background-color: rgba(255, 255, 255, 0.847);
+  background-color: rgba(135, 206, 250, 0.761);
 }
 
 @media screen and (max-width: 700px) {
@@ -83,12 +86,18 @@
   }
 
   .button {
-      width: 130px;
+      width: 110px;
       font-size: 16px;
   }
 
   .icon {
     height: 100px;
-    width: 100px;
+    width: 100px;    
+  }
+
+  .temp {
+    padding: 5px 10px;
+    margin: 10px 0px 5px 0px;
+    border-radius: 15px;
   }
 }
