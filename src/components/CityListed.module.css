@@ -2,30 +2,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 550px;
-  height: 100px;
+  width: 60%;
+  height: fit-content;
   background-color: var(--appVeige);
-  margin-bottom: 4px;
-  padding: 20px 10px; 
+  padding: 3px 10px; 
 }
 
 .city {
-  font-size: 22px;
+  font-size: 20px;
   text-decoration: none;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--appRed);
 }
 
 .temp, .data {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
+  width: 250px;
 }
 
 .button {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   font-weight: bold;
   background-color: var(--appRed);
   color: white;
@@ -39,31 +39,36 @@
   color: var(--appRed);
 }
 
-@media screen and (max-width: 600px) {
-  .li {  
-    width: 450px; 
-    padding: 20px 10px; 
+@media screen and (max-width: 700px) {
+  .li {
+  width: 98%;
+  padding: 1px 5px;
   }
 
   .city {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
   }
 
   .temp, .data {
-    font-size: 15px;
-    gap: 5px;
+    width: 200px;
+    gap: 2px;
   }
 
   .button {
-    height: 22px;
-    width: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;  
+    height: 25px;
+    width: 25px;
+    font-weight: bold;
+    background-color: var(--appRed);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
 
-  .data p {
-    font-size: 14px;
+  .button:hover {
+    background-color: white;
+    color: var(--appRed);
   }
+
 }

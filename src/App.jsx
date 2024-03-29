@@ -13,8 +13,9 @@ import Footer from './components/Footer'
 function App() {
 
   const [citiesArray, setCitiesArray] = useState([])
-
+  
   function fetchCity (inputCity) {
+    if(citiesArray.length > 7)setCitiesArray(old => old.pop()) 
     fetchApi(inputCity,citiesArray, setCitiesArray)} 
 
   function deleteCity (id) {

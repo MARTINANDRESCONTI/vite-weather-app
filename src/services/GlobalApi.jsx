@@ -45,13 +45,9 @@ export default function fetchApi (inputCity,citiesArray, setCitiesArray){
           longitud: res.coord.lon,  
           country: res.sys.country        
         }
-        console.log(res)
-        // const notrepeat = citiesArray.find(e => e.id === res.id)
-        // console.log(notrepeat?.name)
-        // !notrepeat && setCitiesArray(oldCities => [elem, ...oldCities]); 
-        // !citiesArray.find(e => e.id === res.id) 
+        console.log(res)         
         setCitiesArray(citiesArray.filter(e => e.id !==res.id))
-        setCitiesArray(oldCities => [elem, ...oldCities]);           
+        setCitiesArray(oldCities => [elem, ...oldCities]);                  
       } else {
         alert("Ciudad no encontrada");
       }
