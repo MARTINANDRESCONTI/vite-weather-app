@@ -99,6 +99,12 @@
   z-index: 3;
 }
 
+.footer {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  }
+
 @media screen and (max-width: 700px) {
   .header{
     padding: 0px 5px;
@@ -153,7 +159,12 @@
     font-size: 14px;
     font-weight: 400;
   }
+}
 
+@media screen and (max-height: 400px) {
+  .footer {
+    display: none;
+  }
 }
 
 

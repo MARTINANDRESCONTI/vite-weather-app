@@ -20,8 +20,8 @@ function App() {
 
   function deleteCity (id) {
     setCitiesArray(old => old.filter(c=> c.id !== id))
-  } 
-  
+  }
+
   return (
     <div className={style.main}>      
       <header className={style.header}> 
@@ -65,10 +65,10 @@ function App() {
             </Routes>
           </div>        
       </section>
-      <Footer />
-    </div>    
-   
-    
+      <div className={style.footer}>
+        <Footer />
+      </div>      
+    </div>     
   )
 }
 
