@@ -16,6 +16,8 @@
 }
 
 .temp, .data {
+  font-size: 16px;
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -51,8 +53,10 @@
   }
 
   .temp, .data {
+    font-size: 12px;
+    font-weight: 400;
     width: 200px;
-    gap: 2px;
+    gap: 3px;
   }
 
   .button {
@@ -70,5 +74,15 @@
     background-color: white;
     color: var(--appRed);
   }
+}
 
+@media screen and (max-width: 400px) {
+  .data {
+    width: 165px;
+  }
+  
+  .temp{
+    font-size: 11px;
+    font-weight: 400;
+  }
 }
